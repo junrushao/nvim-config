@@ -63,7 +63,7 @@ local setup_server = function(server_name, fn_setup)
 end
 
 local function enable_format_on_save(client)
-  if client.server_capabilities.document_formatting then
+  if client.server_capabilities.documentFormattingProvider then
     require("user.general.options").augroup("LspFormatting", {
       {"BufWritePre", "<buffer>", "lua vim.lsp.buf.format()"},
     }, "* <buffer>")
