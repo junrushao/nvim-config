@@ -27,7 +27,7 @@ lsp_installer.settings{
     },
   },
   -- The directory in which to install all servers.
-  install_root_dir = require("nvim-lsp-installer.path").concat {
+  install_root_dir = require("nvim-lsp-installer.core.path").concat {
     vim.fn.stdpath "data", "lsp_servers"
   },
   pip = {
