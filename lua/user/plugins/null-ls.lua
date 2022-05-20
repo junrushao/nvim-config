@@ -8,7 +8,7 @@ null_ls.setup{
   on_attach = function(client)
     if client.server_capabilities.document_formatting then
       require("user.general.options").augroup("LspFormatting", {
-        {"BufWritePre", "<buffer>", "lua vim.lsp.buf.formatting_sync()"},
+        {"BufWritePre", "<buffer>", "lua vim.lsp.buf.format()"},
       }, "* <buffer>")
     end
   end,

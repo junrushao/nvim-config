@@ -65,7 +65,7 @@ end
 local function enable_format_on_save(client)
   if client.server_capabilities.document_formatting then
     require("user.general.options").augroup("LspFormatting", {
-      {"BufWritePre", "<buffer>", "lua vim.lsp.buf.formatting_sync()"},
+      {"BufWritePre", "<buffer>", "lua vim.lsp.buf.format()"},
     }, "* <buffer>")
   end
 end
@@ -206,7 +206,7 @@ require("user.plugins.which-key")
     h = {"<cmd>lua vim.lsp.buf.hover()<CR>", "Hover"},
     s = {"<cmd>lua vim.lsp.buf.signature_help()<CR>", "Signature help"},
     R = {"<cmd>lua vim.lsp.buf.rename()<CR>", "Rename"},
-    f = {"<cmd>lua vim.lsp.buf.formatting_sync()<CR>", "Format"},
+    f = {"<cmd>lua vim.lsp.buf.format()<CR>", "Format"},
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
