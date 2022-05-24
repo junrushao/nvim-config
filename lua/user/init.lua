@@ -13,6 +13,7 @@ require("user.plugins.vim-illuminate")
 require("user.plugins.nvim-autopairs")
 require("user.plugins.resize-window") -- an extra plugin
 require("user.plugins.auto-session") -- an extra plugin
+require("user.plugins.nvim-notify")
 
 -- Theme & UI
 -- Ignored onedark

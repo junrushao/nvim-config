@@ -34,6 +34,7 @@ return packer.startup(function(use)
   use "RRethy/vim-illuminate"
   use 'windwp/nvim-autopairs'
   use 'rmagatti/auto-session'
+  use 'rcarriga/nvim-notify'
 
   -- Theme & UI
   use 'navarasu/onedark.nvim'
