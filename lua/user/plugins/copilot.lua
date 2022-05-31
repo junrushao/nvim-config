@@ -11,3 +11,12 @@ vim.g.copilot_filetypes = {
 --   let g:copilot_no_tab_map = v:true
 -- ]]
 
+-- local M = {}
+--
+-- function M.setup()
+--   vim.notify("Setting up Copilot","info", {title = "Environment"})
+--   require("copilot").setup(
+--   )
+-- end
+--
+-- return M

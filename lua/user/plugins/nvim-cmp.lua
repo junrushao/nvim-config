@@ -11,6 +11,7 @@ cmp.setup({
         luasnip = "[LuaSnip]",
         nvim_lua = "[Lua]",
         latex_symbols = "[LaTeX]",
+        -- copilot = "[Copilot]",
       },
     },
   },
@@ -43,6 +44,7 @@ cmp.setup({
     {
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'copilot' },
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.

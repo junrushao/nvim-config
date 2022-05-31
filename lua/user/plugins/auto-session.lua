@@ -12,7 +12,7 @@ require('auto-session').setup{
   -- the configs below are lua only
   bypass_session_save_file_types = nil,
   post_restore_cmds = {
-    'lua vim.notify(vim.inspect(require("user.path")), "info", {title = "Environment"})',
+    -- 'lua vim.notify(vim.inspect(require("user.path")), "info", {title = "Environment"})',
   },
 }
 
