@@ -72,23 +72,11 @@ return packer.startup(function(use)
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use 'onsails/lspkind-nvim'
   use "p00f/clangd_extensions.nvim"
+  use 'simrat39/symbols-outline.nvim'
 
   -- Auto-completion
   use 'hrsh7th/nvim-cmp'
   use 'github/copilot.vim'
-  -- use {
-  --   "zbirenbaum/copilot.lua",
-  --   event = {"VimEnter"},
-  --   config = function()
-  --     vim.defer_fn(function()
-  --       require("user.plugins.copilot").setup()
-  --     end, 100)
-  --   end,
-  -- }
-  -- use {
-  --     "zbirenbaum/copilot-cmp",
-  --     after = { "copilot.lua", "nvim-cmp" },
-  -- }
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'

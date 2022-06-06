@@ -43,6 +43,7 @@ require("user.plugins.goto-preview")
 require("user.plugins.nvim-code-action-menu")
 require("user.plugins.nvim-treesitter")
 require("user.plugins.lspkind-nvim")
+require("user.plugins.symbols-outline")
 -- Ignored clangd_extensions
 
 -- Auto-completion

@@ -50,3 +50,9 @@ vim.g.symbols_outline = {
         TypeParameter = {icon = "𝙏", hl = "TSParameter"}
     }
 }
+
+require("user.plugins.which-key")
+.register("n", {
+  ["<Leader>w"] = {"<cmd>SymbolsOutline<CR>", "Toggle symbol outline"},
+})
+
