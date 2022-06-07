@@ -470,3 +470,5 @@ surjective
 onnx
 YOLO
 reconstructor
+multinomial
+searchbox
