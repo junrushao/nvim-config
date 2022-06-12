@@ -45,6 +45,7 @@ return packer.startup(function(use)
   use "petertriho/nvim-scrollbar"
   use "goolord/alpha-nvim"
   use "akinsho/toggleterm.nvim"
+  use {"SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter"}
   use {'VonHeikemen/searchbox.nvim', requires = {'MunifTanjim/nui.nvim'}}
 
   -- Git integration

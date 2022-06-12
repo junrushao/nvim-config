@@ -1,3 +1,5 @@
+gps = require("user.plugins.nvim-gps")
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -11,6 +13,9 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {
+      {gps.get_location, cond = gps.is_available},
+    },
+    lualine_x = {
       {
         'filename',
         file_status = true,   -- Displays file status (readonly status, modified status)
@@ -18,7 +23,7 @@ require('lualine').setup {
                               -- 1: Relative path
                               -- 2: Absolute path
                               -- 3: Absolute path, with tilde as the home directory
-        shorting_target = 40, -- Shortens path to leave 40 spaces in the window
+        shorting_target = 60, -- Shortens path to leave 60 spaces in the window
         symbols = {
           modified = '[+]',      -- Text to show when the file is modified.
           readonly = '[-]',      -- Text to show when the file is non-modifiable or readonly.
@@ -26,7 +31,6 @@ require('lualine').setup {
         },
       },
     },
-    lualine_x = {},
     lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
