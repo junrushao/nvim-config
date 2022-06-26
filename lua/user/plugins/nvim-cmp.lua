@@ -59,7 +59,7 @@ cmp.setup({
     {
       { name = 'nvim_lsp' },
       { name = 'vsnip' }, -- For vsnip users.
-      { name = 'cmp_tabnine' },
+      -- { name = 'cmp_tabnine' },
       -- { name = 'nvim_lsp_signature_help' },
       -- { name = 'copilot' },
       -- { name = 'luasnip' }, -- For luasnip users.
