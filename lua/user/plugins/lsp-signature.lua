@@ -6,7 +6,7 @@ require'lsp_signature'.setup{
   verbose = false, -- show debug line number
   bind = true, -- This is mandatory, otherwise border config won't get registered.
                -- If you want to hook lspsaga or other signature handler, pls set to false
-  doc_lines = 10, -- will show two lines of comment/doc(if there are more than two lines in doc, will be truncated);
+  doc_lines = 15, -- will show two lines of comment/doc(if there are more than two lines in doc, will be truncated);
                  -- set to 0 if you DO NOT want any API comments be shown
                  -- This setting only take effect in insert mode, it does not affect signature help in normal
                  -- mode, 10 by default
@@ -15,8 +15,8 @@ require'lsp_signature'.setup{
   -- will set to true when fully tested, set to false will use whichever side has more space
   -- this setting will be helpful if you do not want the PUM and floating win overlap
 
-  floating_window_off_x = 1, -- adjust float windows x position.
-  floating_window_off_y = 1, -- adjust float windows y position.
+  floating_window_off_x = 0, -- adjust float windows x position.
+  floating_window_off_y = 5, -- adjust float windows y position.
   fix_pos = false,  -- set to true, the floating window will not auto-close until finish all parameters
   hint_enable = true, -- virtual hint enable
   hint_prefix = "🦊 ",  -- Panda for parameter
@@ -28,7 +28,7 @@ require'lsp_signature'.setup{
   handler_opts = {
     border = "rounded"   -- double, rounded, single, shadow, none
   },
-  always_trigger = false, -- sometime show signature on new line or in middle of parameter can be confusing, set it to false for #58
+  always_trigger = true, -- sometime show signature on new line or in middle of parameter can be confusing, set it to false for #58
   auto_close_after = nil, -- autoclose signature float win after x sec, disabled if nil.
   extra_trigger_chars = {}, -- Array of extra characters that will trigger signature completion, e.g., {"(", ","}
   zindex = 200, -- by default it will be on top of all floating windows, set to <= 50 send it to bottom

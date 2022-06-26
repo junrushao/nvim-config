@@ -50,7 +50,8 @@ require("user.plugins.symbols-outline")
 
 -- Auto-completion
 require("user.plugins.nvim-cmp")
-require("user.plugins.copilot")
+require("user.plugins.cmp-tabnine")
+-- require("user.plugins.copilot")
 
 -- require("user.plugins.symbols-outline")
 -- require("user.plugins.sidebar")

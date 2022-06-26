@@ -3,7 +3,7 @@ local PATH = require("user.path")
 
 null_ls.setup{
   debug = false,
-  default_timeout = 1000000,
+  default_timeout = 2000,
   fallback_severity = vim.diagnostic.severity.HINT,
   on_attach = function(client)
     if client.server_capabilities.documentFormattingProvider then
