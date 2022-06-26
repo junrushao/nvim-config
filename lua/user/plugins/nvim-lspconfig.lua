@@ -54,7 +54,10 @@ local setup_server = function(server_name, fn_setup)
   if not server_available then
     return
   end
-  require("user.plugins.nvim-cmp").setup_lsp(server_name)
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities = require("user.plugins.nvim-cmp").setup_lsp(server_name, capabilities)
+  capabilities = require("user.plugins.nvim-ufo").setup_lsp(server_name, capabilities)
+  lspconfig[server_name].setup { capabilities = capabilities }
   fn_setup(server)
   if not server:is_installed() then
     -- Queue the server to be installed.

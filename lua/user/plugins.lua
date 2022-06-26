@@ -47,6 +47,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use {"SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter"}
   use {'VonHeikemen/searchbox.nvim', requires = {'MunifTanjim/nui.nvim'}}
+  use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- Git integration
   use "lewis6991/gitsigns.nvim"

@@ -56,10 +56,10 @@ local options = {
   timeoutlen = 100,                 -- time to wait for a mapped sequence to complete (in milliseconds)
   updatetime = 300,                 -- faster completion (4000ms default)
   -- Folding
-  foldmethod = "expr",              -- fold by indentation
-  foldlevel = 1000,                 -- default fold level
-  -- foldcolumn = "5",                 -- fold columns
-  foldexpr = 'nvim_treesitter#foldexpr()',
+  foldcolumn = "1",                 -- fold columns
+  foldlevel = 99,                   -- default fold level
+  foldenable = true,                -- enable folding
+  fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]],
   -- Misc
   mouse = "a",                      -- Enable your mouse
   spell = false,                    -- Turn off Vim's spell as it highlights the same words.

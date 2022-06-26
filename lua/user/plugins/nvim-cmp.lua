@@ -96,13 +96,9 @@ cmp.setup.cmdline(':', {
 
 local M = {}
 
-function M.setup_lsp(server_name)
-  local capabilities = require('cmp_nvim_lsp').update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
-  )
-  require('lspconfig')[server_name].setup {
-    capabilities = capabilities
-  }
+function M.setup_lsp(server_name, capabilities)
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+  return capabilities
 end
 
 return M
