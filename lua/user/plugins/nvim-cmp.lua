@@ -1,18 +1,33 @@
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
+
+local source_mapping = {
+  buffer = "[Buffer]",
+  nvim_lsp = "[LSP]",
+  luasnip = "[LuaSnip]",
+  nvim_lua = "[Lua]",
+  latex_symbols = "[LaTeX]",
+  cmp_tabnine = "[TN]",
+}
+
 cmp.setup({
   formatting = {
     format = lspkind.cmp_format{
       maxwidth = 50,
-      menu = {
-        buffer = "[Buffer]",
-        nvim_lsp = "[LSP]",
-        luasnip = "[LuaSnip]",
-        nvim_lua = "[Lua]",
-        latex_symbols = "[LaTeX]",
-        -- copilot = "[Copilot]",
-      },
+      menu = source_mapping,
+      before = function(entry, vim_item)
+        vim_item.kind = lspkind.presets.default[vim_item.kind]
+        local menu = source_mapping[entry.source.name]
+        if entry.source.name == "cmp_tabnine" then
+          if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+            menu = entry.completion_item.data.detail .. " " .. menu
+          end
+          vim_item.kind = ""
+        end
+        vim_item.menu = menu
+        return vim_item
+      end,
     },
   },
   snippet = {
