@@ -109,8 +109,5 @@ M.augroup("switch_line_number_relative", {
   {"BufLeave,FocusLost,InsertEnter,WinLeave"  , "*", "if &nu                    | set nornu | endif"},
 })
 
-M.augroup("jump_to_last_position", {
-  {"BufReadPost", "*", [[ if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]]},
-})
 
 return M

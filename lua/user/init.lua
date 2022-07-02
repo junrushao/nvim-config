@@ -19,6 +19,7 @@ require("user.plugins.nvim-notify")
 -- Ignored onedark
 -- Ignored nvim-web-devicons
 require("user.plugins.lualine")
+-- require("user.plugins.feline")
 require("user.plugins.nvim-tree")
 require("user.plugins.bufferline")
 require("user.plugins.nvim-scrollbar")
