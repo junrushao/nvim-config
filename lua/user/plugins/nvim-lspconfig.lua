@@ -215,3 +215,6 @@ require("user.plugins.which-key")
   -- vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   },
 })
+.register("n", {
+  ["<Leader><Leader>"] = {"<cmd>lua vim.lsp.buf.hover()<CR>", "LSP Hover"}
+})
