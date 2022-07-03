@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use 'onsails/lspkind-nvim'
   use "p00f/clangd_extensions.nvim"
   use 'simrat39/symbols-outline.nvim'
+  use 'j-hui/fidget.nvim'
   -- use 'amrbashir/nvim-docs-view'
 
   -- Auto-completion
