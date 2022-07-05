@@ -80,7 +80,6 @@ local options = {
   -- vim.o.shortmess = vim.o.shortmess .. 'c' " Dont' pass messages to |ins-completin menu|
 }
 
-vim.opt.iskeyword:append("-")
 vim.opt.formatoptions:remove("cro")
 vim.opt.formatoptions:append("j")
 for k, v in pairs(options) do
