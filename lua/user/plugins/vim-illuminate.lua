@@ -5,5 +5,5 @@ vim.cmd [[ hi def link LspReferenceRead CursorLine ]]
 
 vim.cmd('augroup illuminate_augroup')
 vim.cmd('autocmd!')
-vim.cmd([[autocmd VimEnter * hi illuminatedWord cterm=underline gui=underline]])
+vim.cmd([[autocmd VimEnter * hi link illuminatedWord Visual]])
 vim.cmd('augroup END')
