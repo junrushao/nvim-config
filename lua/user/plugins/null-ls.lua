@@ -6,7 +6,7 @@ null_ls.setup{
   default_timeout = 2000,
   fallback_severity = vim.diagnostic.severity.HINT,
   on_attach = function(client)
-    if client.server_capabilities.documentFormattingProvider then
+    if client.supports_method("textDocument/formatting") then
       require("user.general.options").augroup("LspFormatting", {
         {"BufWritePre", "<buffer>", "lua vim.lsp.buf.format()"},
       }, "* <buffer>")
