@@ -81,6 +81,9 @@ setup_server("pyright", function(server)
         enable_format_on_save(client)
         -- require 'illuminate'.on_attach(client)
       end,
+      flags = {
+        debounce_text_changes = 300,
+      },
       settings = {
         pyright = {
           disableOrganizeImports = true,
