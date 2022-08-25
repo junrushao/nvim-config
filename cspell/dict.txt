@@ -510,3 +510,5 @@ rsqrt
 tvm_stack_alloca
 call_cpacked
 ldmatrix
+Unittests
+cprint

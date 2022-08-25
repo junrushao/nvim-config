@@ -193,6 +193,7 @@ require("user.plugins.which-key")
   ["<Leader>f"] = {
     name = "Telescope",
     f = {"<cmd>lua require('user.plugins.telescope').find_files()<cr>", "Find files"},
+    o = {"<cmd>Telescope oldfiles<cr>", "Find files"},
     g = {"<cmd>lua require('user.plugins.telescope').live_grep()<cr>", "Grep"},
     b = {"<cmd>lua require('user.plugins.telescope').file_browser()<cr>", "File browser"},
   },

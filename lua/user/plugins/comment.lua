@@ -62,13 +62,13 @@ require('Comment').setup {
 require("user.plugins.which-key")
 .register("n", {
   ["<Leader>/"] = {
-    '<cmd>lua require("Comment.api").toggle_linewise_op()<cr>',
+    '<cmd>lua require("Comment.api").toggle.linewise()<cr>',
     "Toggle linewise-comment on the current line",
   },
 })
 .register("v", {
   ["<Leader>/"] = {
-    '<esc><cmd>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<cr>',
+    '<esc><cmd>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<cr>',
     "Toggle linewise-comment on the current line",
   },
 })
