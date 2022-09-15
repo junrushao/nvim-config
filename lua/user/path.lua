@@ -33,10 +33,5 @@ return {
   CSPELL_CONFIG   = vim.fn.stdpath("config") .. "/cspell/cspell.json",
   TVM_HOME        = os.getenv("TVM_HOME"),
   PYTHONPATH      = os.getenv("PYTHONPATH") or "",
-  AUTO_SESSION    = {
-    "~/Projects/tvm-dev",
-    "~/Projects/tvm-stable",
-    "~/Projects/relax-dev",
-    "~/.config/nvim",
-  },
+  AUTO_SESSION    = {},
 }
