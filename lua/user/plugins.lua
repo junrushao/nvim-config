@@ -33,7 +33,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "RRethy/vim-illuminate"
   use 'windwp/nvim-autopairs'
-  use 'rmagatti/auto-session'
+  -- use 'rmagatti/auto-session'
   use 'rcarriga/nvim-notify'
 
   -- Theme & UI
@@ -62,7 +62,7 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-ui-select.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
   use {"nvim-telescope/telescope-frecency.nvim", requires = {"tami5/sqlite.lua"}}
-  use "rmagatti/session-lens"
+  -- use "rmagatti/session-lens"
   -- use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- LSP & Parser

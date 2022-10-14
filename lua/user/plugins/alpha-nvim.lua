@@ -14,9 +14,9 @@ dashboard.section.header.val = {
 
 -- Set menu
 dashboard.section.buttons.val = {
-  dashboard.button("e", "  > Find session" , ":lua require('session-lens').search_session()<CR>"),
+  dashboard.button("r", "  > Recent"       , ":lua require('user.plugins.telescope').oldfiles()<CR>"),
   dashboard.button("f", "  > Find file"    , ":lua require('user.plugins.telescope').find_files()<CR>"),
-  dashboard.button("r", "  > Recent"       , ":Telescope oldfiles<CR>"),
+  dashboard.button("e", "  > Find session" , ":lua require('session-lens').search_session()<CR>"),
   dashboard.button("c", "  > Config"       , ":e $MYVIMRC | :cd %:p:h | split . | wincmd k | pwd<CR>"),
   dashboard.button("q", "  > Quit"         , ":qa<CR>"),
 }

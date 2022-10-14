@@ -121,7 +121,7 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('media_files')
 require("telescope").load_extension("ui-select")
 require("telescope").load_extension("file_browser")
-require("telescope").load_extension("session-lens")
+-- require("telescope").load_extension("session-lens")
 -- require("telescope").load_extension("frecency")
 
 local M = {}
@@ -188,12 +188,34 @@ function M.file_browser()
   }
 end
 
+function M.oldfiles()
+  require('telescope.builtin').oldfiles{
+    winblend = 20,
+    hidden = true,
+    find_command = {"rg", "--ignore", "--hidden", "--files"},
+    selection_caret = " ",
+    width = 0.8,
+    border = false,
+    show_line = false,
+    prompt_prefix = '🔍  ',
+    prompt_title = '',
+    results_title = '',
+    preview_title = '',
+    borderchars = {
+      prompt = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' },
+      results = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' },
+      preview = {'▀', '▐', '▄', '▌', '▛', '▜', '▟', '▙' },
+    },
+  }
+end
+
+
 require("user.plugins.which-key")
 .register("n", {
   ["<Leader>f"] = {
     name = "Telescope",
     f = {"<cmd>lua require('user.plugins.telescope').find_files()<cr>", "Find files"},
-    o = {"<cmd>Telescope oldfiles<cr>", "Find files"},
+    o = {"<cmd>lua require('user.plugins.telescope').oldfiles()<cr>", "Recent files"},
     g = {"<cmd>lua require('user.plugins.telescope').live_grep()<cr>", "Grep"},
     b = {"<cmd>lua require('user.plugins.telescope').file_browser()<cr>", "File browser"},
   },
