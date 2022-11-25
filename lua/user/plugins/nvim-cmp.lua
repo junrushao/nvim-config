@@ -97,7 +97,7 @@ cmp.setup.cmdline(':', {
 local M = {}
 
 function M.setup_lsp(server_name, capabilities)
-  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+  capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
   return capabilities
 end
 
