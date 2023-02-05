@@ -548,3 +548,4 @@ FILELINE
 gelu
 silu
 hardswish
+tlcpack

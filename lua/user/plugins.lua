@@ -48,6 +48,13 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use {"SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter"}
   use {'VonHeikemen/searchbox.nvim', requires = {'MunifTanjim/nui.nvim'}}
+  use {"utilyre/barbecue.nvim", tag = "*", after = "nvim-web-devicons",
+    requires = {
+      "SmiteshP/nvim-navic",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function() require("barbecue").setup() end,
+  }
   use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 
   -- Git integration

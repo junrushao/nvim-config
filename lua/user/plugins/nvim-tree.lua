@@ -13,12 +13,14 @@ local tree_cb = nvim_tree_config.nvim_tree_callback
 nvim_tree.setup {
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = true,
-  ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
-    "alpha",
-  },
+  -- open_on_setup = true,
+  -- ignore_ft_on_setup = {
+  --   "startify",
+  --   "dashboard",
+  --   "alpha",
+  -- },
+  -- ignore_buffer_on_setup = false,
+  -- open_on_setup_file = false,
   diagnostics = {
     enable = true,
     show_on_dirs = true,
@@ -42,8 +44,6 @@ nvim_tree.setup {
   auto_reload_on_write = true,
   hijack_cursor = false,
   hijack_unnamed_buffer_when_opening = false,
-  ignore_buffer_on_setup = false,
-  open_on_setup_file = false,
   open_on_tab = false,
   sort_by = "name",
   update_cwd = true,

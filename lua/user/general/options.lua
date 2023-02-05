@@ -70,7 +70,7 @@ local options = {
   sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal",
 
   laststatus = 3,
-  winbar = "%{%v:lua.require'user.plugins.winbar'.eval()%}",
+  -- winbar = "%{%v:lua.require'user.plugins.winbar'.eval()%}",
   -- https://www.shortcutfoo.com/blog/top-50-vim-configuration-options/
   -- set pumheight=30                        " Makes popup menu smaller
   -- set t_Co=256                            " Support 256 colors
