@@ -41,7 +41,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   -- use 'feline-nvim/feline.nvim'
-  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-tree/nvim-tree.lua'
   use 'akinsho/bufferline.nvim'
   use "petertriho/nvim-scrollbar"
   use "goolord/alpha-nvim"
