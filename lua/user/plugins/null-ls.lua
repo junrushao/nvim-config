@@ -32,16 +32,16 @@ null_ls.setup{
       method = null_ls.methods.DIAGNOSTICS_ON_SAVE,
       command = PATH.PYLINT,
       args = function(params)
-        if PATH.TVM_HOME ~= nil then 
-          return {
-            "$FILENAME", "-f", "json",
-            "--rcfile=" .. PATH.TVM_HOME .. "/tests/lint/pylintrc",
-            "--enable=undefined-variable,no-member,no-self-use,fixme,no-name-in-module,import-error,unsubscriptable-object,unbalanced-tuple-unpacking,undefined-variable,protected-access,consider-using-get",
-            "--init-hook", "import sys; sys.path.insert(0, '" .. PATH.TVM_HOME .. "/python')",
-          }
-        else
-          return {"$FILENAME", "-f", "json"}
-        end
+        return {"$FILENAME", "-f", "json"}
+        -- if PATH.TVM_HOME ~= nil then 
+        --   return {
+        --     "$FILENAME", "-f", "json",
+        --     "--rcfile=" .. PATH.TVM_HOME .. "/tests/lint/pylintrc",
+        --     "--enable=undefined-variable,no-member,no-self-use,fixme,no-name-in-module,import-error,unsubscriptable-object,unbalanced-tuple-unpacking,undefined-variable,protected-access,consider-using-get",
+        --     "--init-hook", "import sys; sys.path.insert(0, '" .. PATH.TVM_HOME .. "/python')",
+        --   }
+        -- else
+        -- end
       end,
     },
     null_ls.builtins.diagnostics.mypy.with{

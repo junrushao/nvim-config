@@ -549,3 +549,9 @@ gelu
 silu
 hardswish
 tlcpack
+keepdims
+Triu
+Tril
+sinfo
+elems
+gvar

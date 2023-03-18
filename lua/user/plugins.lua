@@ -40,7 +40,6 @@ return packer.startup(function(use)
   use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
-  -- use 'feline-nvim/feline.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'akinsho/bufferline.nvim'
   use "petertriho/nvim-scrollbar"
@@ -77,7 +76,6 @@ return packer.startup(function(use)
   use "folke/trouble.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use 'kosayoda/nvim-lightbulb'
-  use "ray-x/lsp_signature.nvim"
   use "rmagatti/goto-preview"
   use {'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -85,7 +83,16 @@ return packer.startup(function(use)
   use "p00f/clangd_extensions.nvim"
   use 'simrat39/symbols-outline.nvim'
   use 'j-hui/fidget.nvim'
-  -- use 'amrbashir/nvim-docs-view'
+  use {"amrbashir/nvim-docs-view",
+    opt = true,
+    cmd = { "DocsViewToggle" },
+    config = function()
+      require("docs-view").setup {
+        position = "top",
+        height = 6,
+      }
+    end
+  }
 
   -- Auto-completion
   use 'hrsh7th/nvim-cmp'
