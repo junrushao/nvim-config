@@ -555,3 +555,9 @@ Tril
 sinfo
 elems
 gvar
+docscrape
+numpydoc
+logits
+argmin
+containerable
+remapper

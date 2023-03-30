@@ -11,15 +11,14 @@ require("user.plugins.comment")
 require("user.plugins.indent-blankline")
 require("user.plugins.vim-illuminate")
 require("user.plugins.nvim-autopairs")
-require("user.plugins.resize-window") -- an extra plugin
--- require("user.plugins.auto-session") -- an extra plugin
+require("user.plugins.resize-window")
+-- require("user.plugins.auto-session")
 require("user.plugins.nvim-notify")
 
 -- Theme & UI
 -- Ignored onedark
 -- Ignored nvim-web-devicons
 require("user.plugins.lualine")
--- require("user.plugins.feline")
 require("user.plugins.nvim-tree")
 require("user.plugins.bufferline")
 require("user.plugins.nvim-scrollbar")
@@ -30,7 +29,6 @@ require("user.plugins.searchbox")
 
 -- Git Integration
 require("user.plugins.gitsigns")
-require("user.plugins.diffview")
 require("user.plugins.gitlinker")
 
 -- Telescope
@@ -51,7 +49,6 @@ require("user.plugins.fidget")
 
 -- Auto-completion
 require("user.plugins.nvim-cmp")
--- require("user.plugins.cmp-tabnine")
 require("user.plugins.copilot")
 
 -- require("user.plugins.symbols-outline")
