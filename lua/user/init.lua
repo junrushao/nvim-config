@@ -24,7 +24,6 @@ require("user.plugins.bufferline")
 require("user.plugins.nvim-scrollbar")
 require("user.plugins.alpha-nvim")
 require("user.plugins.toggleterm")
-require("user.plugins.nvim-gps")
 require("user.plugins.searchbox")
 
 -- Git Integration

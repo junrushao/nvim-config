@@ -45,7 +45,6 @@ return packer.startup(function(use)
   use "petertriho/nvim-scrollbar"
   use "goolord/alpha-nvim"
   use "akinsho/toggleterm.nvim"
-  use {"SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter"}
   use {'VonHeikemen/searchbox.nvim', requires = {'MunifTanjim/nui.nvim'}}
   use {"utilyre/barbecue.nvim", tag = "*", after = "nvim-web-devicons",
     requires = {
@@ -58,7 +57,7 @@ return packer.startup(function(use)
 
   -- Git integration
   use "lewis6991/gitsigns.nvim"
-  use 'sindrets/diffview.nvim'
+  -- use 'sindrets/diffview.nvim'
   use "ruifm/gitlinker.nvim"
 
   -- Telescope
