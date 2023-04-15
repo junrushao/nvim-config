@@ -27,7 +27,7 @@ return {
   BLACK           = get_conda_executable("bin/black", "black"),
   MYPY            = get_conda_executable("bin/mypy", "mypy"),
   ISORT           = get_conda_executable("bin/isort", "isort"),
-  CLANGD          = "clangd",
+  CLANGD          = vim.fn.stdpath('data') .. "/lsp_servers/clangd/clangd/bin/clangd",
   CSPELL          = "cspell",
   CSPELL_DICT     = vim.fn.stdpath("config") .. "/cspell/dict.txt",
   CSPELL_CONFIG   = vim.fn.stdpath("config") .. "/cspell/cspell.json",
