@@ -129,7 +129,6 @@ setup_server("clangd", function(server)
           "--clang-tidy",
           "--completion-style=detailed",
           "--header-insertion=never",
-          "--inlay-hints",
           "-j=12",
           "--pch-storage=memory",
           -- "--header-insertion-decorators",

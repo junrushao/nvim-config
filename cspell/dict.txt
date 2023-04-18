@@ -563,3 +563,5 @@ containerable
 remapper
 databricks
 neox
+layernorm
+GPTNeoXMLP
