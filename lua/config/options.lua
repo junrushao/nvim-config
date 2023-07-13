@@ -23,3 +23,10 @@ vim.opt.whichwrap = "b,s,<,>,[,],h,l" -- <BS>, <Space> <Left>, <Right>, h, and l
 -- vim.opt.cursorline = true -- Enable highlighting of the current line
 -- vim.opt.cursorcolumn = true -- Enable highlighting of the current column
 vim.opt.colorcolumn = "100" -- Highlight the column at 100 characters
+
+-- Backup file
+vim.opt.backup = false -- no backup file
+vim.opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+vim.opt.swapfile = false -- no swap file
+vim.opt.undofile = true -- enable persistent undo
+vim.opt.autoread = true -- auto load when modified by another program
