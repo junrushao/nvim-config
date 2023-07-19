@@ -3,6 +3,7 @@ return {
   {
     "olimorris/onedarkpro.nvim",
     priority = 10000, -- Ensure it loads first
+    lazy = false,
     opts = {
       highlights = {
         MiniCursorword = { link = "Visual" },
@@ -180,5 +181,15 @@ return {
       }
       return {}
     end,
+  },
+  {
+    "kevinhwang91/nvim-ufo",
+    event = "VeryLazy",
+    dependencies = { "nvim-treesitter", "kevinhwang91/promise-async" },
+    opts = {
+      provider_selector = function(_, _, _)
+        return { "treesitter", "indent" }
+      end,
+    },
   },
 }
