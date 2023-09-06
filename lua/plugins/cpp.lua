@@ -13,6 +13,7 @@ return {
   {
     "p00f/clangd_extensions.nvim",
     lazy = true,
+    commit = "723639da63ad87753c4a9271077a39b5b2f080a4",
     config = function() end,
     opts = {
       filetypes = { "c", "cpp", "h", "hpp" },
@@ -69,6 +70,7 @@ return {
           },
           cmd = {
             "clangd",
+            "--query-driver=/usr/bin/g++-11",
             "--background-index",
             "--clang-tidy",
             "--header-insertion=iwyu",
